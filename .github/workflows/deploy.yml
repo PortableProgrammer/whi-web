@@ -28,4 +28,4 @@ jobs:
           remoteDir: "warnerheavyindustries.com"
           # Delete remote entries that don't exist in the source
           # Ignore .git*, LICENSE, and README.md
-          options: "--delete -x ^\.git* -x ^LICENSE$ -x ^README\.md$"
+          options: "--delete -x ^\\.git* -x ^LICENSE$ -x ^README\\.md$"
