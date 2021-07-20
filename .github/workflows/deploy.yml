@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: ftp-action
@@ -25,6 +24,8 @@ jobs:
           host: ${{ secrets.FTP_HOST }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          forceSsl: false
           localDir: .
-          remoteDir: .
+          remoteDir: "warnerheavyindustries.com"
+          # Delete remote entries that don't exist in the source
+          # Ignore .git*, LICENSE, and README.md
+          options: "--delete -x ^\.git* -x ^LICENSE$ -x ^README\.md$"
