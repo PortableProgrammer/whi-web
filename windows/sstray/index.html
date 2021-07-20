@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <title>SSTray << Windows Applications << Warner Heavy Industries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/custom-theme.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">WHI</a>
+            </div>
+            <div class="navbar-collapse collapse" id="main-navbar-collapse"></div>
+        </div>
+        <div class="jumbotron">
+            <h1>SSTray</h1>
+            <p>
+                Tired of that ugly lock screen? Wish your screensaver would start automatically when you lock your workstation? Rather your monitor(s) power down instead?
+
+            </p>
+            <p><a class="btn btn-default" href="/downloads/SSTray_2.1_Setup.zip">Download SSTray 2.1 &raquo;</a></p>
+        </div>
+        <p class="well">
+            SSTray allows you to choose what happens when you lock your workstation. You can even start the screen saver or power down the monitors independent of locking your workstation.
+        </p>
+        <div class="page-header">
+            <h2>External Credits</h2>
+        </div>
+        <p>
+            Icons and Images by <a href="http://rhor.deviantart.com" target="_blank">Jorge Rhor</a>
+        </p>
+        <div id="changelog" class="page-header">
+            <h2>Changelog</h2>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            2.1
+                        </a>
+                        <span class="pull-right">2013-01-12</span>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel collapse in">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>Initial public release.</li>
+                        </ul>
+                        <p>Download <a href="/downloads/SSTray_2.1_Setup.zip">Installer</a> or <a href="/downloads/SSTray_2.1_NoSetup.zip">Standalone Zip</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header" id="KnownIssues">
+            <h2>Known Issues</h2>
+        </div>
+        <p>
+            When a password is required to dismiss the screensaver, Windows doesn't lock the workstation until <em>after</em> the screensaver is dismissed.<br />
+            If the screensaver starts automatically, SSTray interprets the lock action after screensaver dismissal as a new lock request, and starts the screensaver.
+        </p>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Recommended Workaround</h3>
+                    </div>
+                    <div class="panel-body">
+                        Set SSTray to "Start Screensaver" upon lock and use the Win+L shortcut to manually lock the workstation.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="list-group">
+                    <a class="list-group-item active">
+                        Other Workarounds
+                    </a>
+                    <a class="list-group-item">Set SSTray to "Do Nothing" upon lock and use the Win+S shortcut to start the screensaver manually.</a>
+                </div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h2>Requirements</h2>
+        </div>
+        <ul class="list-unstyled">
+            <li>Windows XP or later</li>
+            <li>The <a href="http://www.microsoft.com/download/en/details.aspx?id=17113" target="_blank">Microsoft .NET Framework 4 Client Profile</a></li>
+        </ul>
+    </div>
+    <!-- jQuery 2.x doesn't support IE 8 or below, so switch to jQuery 1.x if need be -->
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <!--[if lt IE 9]
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <![endif]-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/layout.js"></script>
+    <script src="/js/changelog.js"></script>
+    <script src="/js/holder.js"></script>
+    <script src="/js/googleAnalytics.js"></script>
+</body>
+</html>

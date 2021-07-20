@@ -1,0 +1,29 @@
+﻿.navbar-brand {
+    color: #008cff !important;
+}
+
+    .navbar-brand:hover, .navbar-brand:focus {
+        color: #0050ff !important;
+    }
+
+.jumbotron {
+    /* Include a specific background color for older browsers that don't support the gradients */
+    background-color: #008cff;
+    background-image: linear-gradient(to bottom, #00aaff 0, #008cff 100%);
+    background-image: -moz-linear-gradient(top, #00aaff 0, #008cff 100%);
+    background-image: -webkit-linear-gradient(top, #00aaff 0, #008cff 100%);
+    color: #fff;
+}
+
+    .jumbotron a:not(.btn) {
+        color: #e0e0e0;
+    }
+
+    .jumbotron a:hover:not(.btn), .jumbotron a:focus:not(.btn) {
+        color: #ebebeb;
+        text-decoration: none;
+    }
+
+.label-info {
+    background-color: #008cff;
+}

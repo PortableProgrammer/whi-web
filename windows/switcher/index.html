@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+    <title>Switcher << Windows Applications << Warner Heavy Industries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/custom-theme.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">WHI</a>
+            </div>
+            <div class="navbar-collapse collapse" id="main-navbar-collapse"></div>
+        </div>
+        <div class="jumbotron">
+            <h1>Switcher</h1>
+            <p>
+                Expos&eacute; for Windows!
+            </p>
+            <p><a class="btn btn-default" href="/downloads/Switcher_3.2.2_Setup.exe">Download Switcher 3.2.2 &raquo;</a></p>
+        </div>
+        <p class="well">
+            Switcher is based on <a href="http://insentient.net" target="_blank">Switcher 2.0</a> by Bao Nguyen, last updated in late 2007. We've been using it around here since then, and we love it. No other application on the market comes as close to a pure Expos&eacute; experience with a minimum of fluff.
+        </p>
+        <div class="page-header">
+            <h2>History</h2>
+        </div>
+        <p>
+            The original is a wonderful product, and works very well, but it has a few issues. After two years' worth of repeated attempts at submitting bug reports, feature requests, and just generally trying to get Bao to return our messages, we decided to fix the app ourselves.
+        </p>
+        <p>
+            The end result is forked from Bao's 2.0 release and represents, in our opinion, an almost perfect implementation of Expos&eacute; on Windows.
+        </p>
+        <div class="page-header">
+            <h2>Moral Issues <small>(or, How we learned to stop worrying and consider it abandonware)</small></h2>
+        </div>
+        <p>
+            We debated long and hard about releasing this to the wild, since it is not in any way endorsed or authorized by Bao, but it's been
+            <script>document.write(new Date().getFullYear() - 2007);</script> years since the last update and at least
+            <script>                document.write(new Date().getFullYear() - 2009);</script> years since we started updating it ourselves, so we feel like it's essentially abandonware. Our major argument against it internally has been that, as of late 2013, insentient.net is still up and running, even though email goes unanswered and the blog link is dead, so
+            <em>someone</em> must be paying that bill, and whomever it is probably is in contact with Bao, meaning there's still the
+            <em>chance</em> that it's not abandoned. Regardless, Bao, if you're around,
+            <a href="mailto:support@warnerheavyindustries.com">drop us a line</a> and we'll be happy to discuss the project. We'd love to merge our edits with yours and produce what we feel is a killer app.
+        </p>
+        <div id="changelog" class="page-header">
+            <h2>Changelog</h2>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                            3.2.2
+                        </a>
+                        <span class="pull-right">2013-01-15</span>
+                    </h4>
+                </div>
+                <div id="collapseFive" class="panel collapse in">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>Zoomed thumbnail fix.</li>
+                            <li>Installer should now perform an upgrade install, but see <a href="#KnownIssues_InstallerUpgrade">Known Issues</a> for a different installer issue.</li>
+                        </ul>
+
+                        <p>
+                            Download
+                            <a href="/downloads/Switcher_3.2.2_Setup.exe">Installer</a> (see
+                            <a href="#KnownIssues_InstallerUpgrade">Known Issues</a>) or
+                            <a href="/downloads/Switcher_3.2.2_NoSetup.zip">Standalone Zip.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                            3.2.1
+                        </a>
+                        <span class="pull-right">2013-01-14</span>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>When the selection/hover zoom is more than 100%, ensure that the zoomed thumbnail stays within the current screen bounds.</li>
+                            <li>Prevent the selected/hovered thumbnail from exceeding the window's original size.</li>
+                            <li>
+                                Offline/Redirected AppData: Saving the settings to an offline or redirected AppData location will intermittently fail due to timing issue in Windows' offline detection. This fix attempts to retry several times and will notify the user if saving ultimately fails. New Advanced settings for this fix:
+                                <ul>
+                                    <li>SaveRetries: Number of times to attempt to save the settings before failing. Default: 10 tries.</li>
+                                    <li>SaveWait: Amount of time in milliseconds to wait between save attempts. Default: 500 ms.</li>
+                                </ul>
+                            </li>
+                            <li>Related to the above: Changing Advanced settings didn't always trigger a save operation.</li>
+                            <li>Updated the copyright to include "parts &copy; 2007 Bao Nguyen" along with the WHI copyright.</li>
+                        </ul>
+                        <p>
+                            Download
+                            <a href="/downloads/Switcher_3.2.1_Setup.exe">Installer</a> (see
+                            <a href="#KnownIssues_InstallerUpgrade">Known Issues</a>) or
+                            <a href="/downloads/Switcher_3.2.1_NoSetup.zip">Standalone Zip.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            3.2
+                        </a>
+                        <span class="pull-right">2013-01-13</span>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>
+                                Updated default input and view settings to more closely resemble a default Expos&eacute; installation:
+                                <ul>
+                                    <li>Default mouse corner is the top-right of the entire desktop (taking into account multiple monitors).</li>
+                                    <li>Default view settings show no visible chrome on the previews.</li>
+                                    <li>Default selection/hover zoom is 110% of the thumbnail.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>
+                            Download
+                            <a href="/downloads/Switcher_3.2_Setup.exe">Installer</a> (see
+                            <a href="#KnownIssues_InstallerUpgrade">Known Issues</a>) or
+                            <a href="/downloads/Switcher_3.2_NoSetup.zip">Standalone Zip.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            3.1
+                        </a>
+                        <span class="pull-right">2013-01-12</span>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>Internal test build, not released.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            3.0 build 1
+                        </a>
+                        <span class="pull-right">2012-02-28</span>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel collapse">
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>Initial public release.</li>
+                        </ul>
+                        <p>Download <a href="/downloads/Switcher_3.0_NoSetup.zip">Standalone Zip.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h2>Problem?</h2>
+        </div>
+        <p id="Issue_NoAero">
+            If you get an error stating
+            <strong>"Warning: Aero is disabled"</strong>, you need to enable Aero for Switcher to work. Windows XP and earlier doesn't support Aero; Windows Vista or later is required. Furthermore, Aero is not available on Windows Vista Home Basic or Windows 7 Starter.
+            <br />
+            If you have a supported Windows Vista or 7 version, choose "Windows Aero" from the list of available color schemes in the control panel:
+            <ol>
+                <li>Open the Control Panel</li>
+                <li>Underneath "Appearance and Personalization", select "Change the color scheme"</li>
+                <li>Choose "Windows Aero" and click "OK"</li>
+            </ol>
+            For Windows 8 and later, Aero is automatically enabled if your hardware supports it.
+        </p>
+        <div class="page-header" id="KnownIssues">
+            <h2>Known Issues</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Administrators: Switcher will not trigger if the currently-active application is running as an administrator and Switcher isn't.</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                        Switcher relies on global mouse and keyboard hooks to detect its triggers. By design, these hooks run in the current user context. If you have UAC enabled, this means that your current user context is a normal user, which cannot access the administrative session. This results in Switcher not receiving trigger events if the currently-active application is run as an administrator. This can be mitigated by running Switcher as an administrator all the time, but that requires responding to the UAC prompt upon every launch, which, to us, is infinitely annoying.
+                        </p>
+                        <p>
+                        We could also resolve the issue by signing our code with a code-signing certificate, but we can't currently justify the cost associated with the code-signing certificate for a freeware product.
+                        </p>
+                        <div class="list-group">
+                            <a class="list-group-item active">An example of this situation in action:</a>
+                            <ul class="list-group">
+                                <li class="list-group-item">1. Switcher starts without a UAC prompt</li>
+                                <li class="list-group-item">2. Open Notepad (normal app) and Computer Mangement (elevated, requiring UAC prompt)</li>
+                                <li class="list-group-item">3. Switcher works normally while Notepad or any other window but Computer Management is active</li>
+                                <li class="list-group-item">4. While Computer Management is active, Switcher does not receive trigger notifications</li>
+                            </ul>
+                        </div>
+                        If Switcher is restarted as an elevated user ("run as administrator"), it behaves as expected, since it has access to the administrative session, which also has access to the non-admin session.            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Offline / Redirected AppData</h4>
+                    </div>
+                    <div class="panel-body">
+                        Saving the settings to an offline or redirected AppData location will intermittently fail due to timing issue in Windows' offline detection. The fix in
+            <a href="#changelog">v.3.2.1</a> retries saving several times and will notify the user if saving ultimately fails.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info" id="KnownIssues_InstallerUpgrade">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Installer Upgrade</h4>
+                    </div>
+                    <div class="panel-body">
+                        If Switcher is running while attempting an upgrade, the installer might fail to shut it down properly, resulting in a corrupted install. Please manually close Switcher before upgrading.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h2>Requirements</h2>
+        </div>
+        <p>
+            <ul class="list-unstyled">
+                <li>Windows Vista or later with Aero enabled.</li>
+                <li>The <a href="http://www.microsoft.com/download/en/details.aspx?id=17113" target="_blank">Microsoft .NET Framework 4 Client Profile</a>.</li>
+            </ul>
+        </p>
+    </div>
+    <!-- jQuery 2.x doesn't support IE 8 or below, so switch to jQuery 1.x if need be -->
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <!--[if lt IE 9]
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <![endif]-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/layout.js"></script>
+    <script src="/js/changelog.js"></script>
+    <script src="/js/holder.js"></script>
+    <script src="/js/googleAnalytics.js"></script>
+</body>
+</html>
